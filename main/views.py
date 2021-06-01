@@ -13,14 +13,16 @@ def page_book(request):
 def add_book(request):
 
     if request.method=='POST':
-        form=BooksForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('page-book')
+        forms=BooksForm(request.POST)
+        if forms.is_valid():
+            forms.save()
+            return HttpResponse('Китеп ийгилиетүү кошулду')
+        else:
+            return HttpResponse('Форманы толтурууда ката кетти')
 
-    form=BooksForm()
+    forms=BooksForm()
     data={
-        'form': form
+        'form': forms
     } 
     return render(request, 'forma.html', data)
   

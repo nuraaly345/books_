@@ -9,30 +9,30 @@ class BooksForm(ModelForm):
 widgets={
     "title":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'Название статьм'
+        'placeholder':'Китептин аталышы'
     }),
         "subtitle":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'anons статьм'
+        'placeholder':'Кыскача аныктама'
     }),
         "description":Textarea(attrs={
         'class': 'form-control',
-        'placeholder':'anons статьм'
+        'placeholder':'Китепти сүрөттөө'
     }),
         "price":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'Text статьм'
+        'placeholder':'Китептин баасы'
     }),
         "genre":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'anons статьм'
+        'placeholder':'Жанры'
     }),
         "author":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'anons статьм'
+        'placeholder':'Автору'
     }),
         "year":TextInput(attrs={
         'class': 'form-control',
-        'placeholder':'anons статьм'
+        'placeholder':'Чыккан жылы'
     }),
 }

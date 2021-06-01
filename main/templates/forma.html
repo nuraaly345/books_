@@ -9,12 +9,13 @@
         <form  method="POST">
             <h1 class="form">Форма толтуруу барагы</h1>
             {% csrf_token %}</p>
-            <p>{{ form.title }}</p>
-            <p>{{ form.subtitle }}</p>
-            <p>{{ form.description }}</p>
-            <p>{{ form.price }}</p>
-            <p>{{ form.author }}</p>
-            <p>{{ form.year }}</p>
+            <p>Китептин аталышы: {{ form.title }}</p>
+            <p>Кыскача аныктама: {{ form.subtitle }}</p>
+            <p>Китепти сүрөттөө: {{ form.description }}</p>
+            <p>Китептин жанры:   {{ form.genre }}</p>
+            <p>Китептин баасы:   {{ form.price }}</p>
+            <p>Китептин автору:  {{ form.author }}</p>
+            <p>Чыккан жылы:      {{ form.year }}</p>
      
             <button class="create_button" type="submit">Кошуу</button> 
         </form>
