@@ -1,0 +1,20 @@
+{% extends 'books.html' %}
+{% load static %}
+
+{% block title %} Китеп жөнүндө маалымат {% endblock %}
+
+{% block content %}
+<h1 class="info"> Китептер боюнча толук маалымат</h1>
+    <div class="information">
+        
+        <p>Китептин аталышы: <span>{{ book_list.title}}</span></p>
+        <p>Кыскача түшүдүрмө: <span>{{ book_list.subtitle}}</span></p>
+        <p>Китепти сүрөттөө: <span>{{ book_list.description}}</span></p>
+        <p>Китептин баасы(сом): <span>{{ book_list.price}}</span></p>
+        <p>Китептин жанры: <span>{{ book_list.genre}}</span></p>
+        <p>Китептин автору: <span>{{ book_list.author}}</span></p>
+        <p>Китептин чыккан жылы: <span>{{ book_list.year}}</span></p>
+        <p>Китеп сайтка жүктөлгөн убактысы: <span>{{ book_list.date}}</span></p>
+        <p class="but"><a href="{%  url 'home' %}"><button class="btn btn-info">Башкы бетке өтүү</button></a></p>
+    </div>
+{% endblock %}

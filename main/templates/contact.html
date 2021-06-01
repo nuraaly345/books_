@@ -1,0 +1,17 @@
+{% extends 'books.html' %}
+{% load static %}
+
+{% block title %} Байланышуу {% endblock %}
+
+{% block content %}
+<h1 class="info"> Сайттын автору</h1>
+<div class="information">
+    <img src="{% static 'icons/author.jpg' %}" alt="author">
+    <p><i class="fas fa-user-tie"></i> Кубатов Нураалы</p>
+    <p><i class="fas fa-mobile-alt"></i> <span> +996550030221</span></p>
+    <p><i class="fas fa-envelope-open-text"></i><span>kubanura57@gmail.com</span></p>
+    <p><i class="fab fa-whatsapp"></i><span> +996550030221</span></p>
+  
+    <p class="but"><a href="{%  url 'home' %}"><button class="btn btn-info">Башкы бетке өтүү</button></a></p>
+</div>
+{% endblock %}

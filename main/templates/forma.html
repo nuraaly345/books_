@@ -1,0 +1,23 @@
+{% extends 'books.html' %}
+{% load static %}
+{% block title %} Жаңы китеп кошуу {% endblock %}
+
+{% block content %}
+<main>
+    <div class="features">
+        
+        <form  method="POST">
+            <h1 class="form">Форма толтуруу барагы</h1>
+            {% csrf_token %}</p>
+            <p>{{ form.title }}</p>
+            <p>{{ form.subtitle }}</p>
+            <p>{{ form.description }}</p>
+            <p>{{ form.price }}</p>
+            <p>{{ form.author }}</p>
+            <p>{{ form.year }}</p>
+     
+            <button class="create_button" type="submit">Кошуу</button> 
+        </form>
+    </div>
+</main>
+{% endblock %}

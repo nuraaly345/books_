@@ -1,0 +1,34 @@
+{% extends 'books.html' %}
+{% load static %}
+
+{% block title %} Китептердин теизмеси {% endblock %}
+
+{% block content %}
+    <section>
+        <div class="book_container">
+            {% for book in book_list %}
+            <div class="book_item
+            {% if book.is_favorite %}
+                marked
+            {% endif%}
+            ">
+                <div class="book_item_header">
+                    <h4><a href="{% url 'open-book' book.id %}">{{book.title}}</a></h4>
+                </div>
+                <div class="book_item_footer">
+                    <p>{{book.date}}</p>
+                    <div class="action_buttons">
+                        {% if book.is_favorite %}
+                        <a href="{% url 'unmark-book' book.id %}"><img src="{% static './icons/marked.png' %}"/></a>
+                        {% else %}
+                        <a href="{% url 'mark-book' book.id %}"><img src="{% static './icons/unmared.png' %}"/></a>
+                        {% endif %}
+                        <a href="{% url 'delete-book' book.id %}"><img src="{% static './icons/2790131631558965374-128.png' %}"/></a>
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section> 
+{% endblock %}

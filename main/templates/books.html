@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './style/index.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static './style/main.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <title>{% block title%} Башкы бет {% endblock%}</title>
+</head>
+<body>
+    <aside>
+        <img src="{% static './icons/logo.png'%}" alt="logo">
+        <span class="logo">Китептер</span>
+        <h3> Навигатор</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Башкы бет</li></a>
+            <a href="{% url 'page-book' %}"><li><i class="fas fa-book"></i>Китептер</li></a>
+            <a href="{% url 'contact' %}"><li><i class="far fa-id-card"></i>Байланыш</li></a>
+            <a href="{% url 'add-book'%}" ><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Жаңы китеп кошуу</button></li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+</body>
+</html>
