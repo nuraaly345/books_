@@ -16,7 +16,7 @@ def add_book(request):
         forms=BooksForm(request.POST)
         if forms.is_valid():
             forms.save()
-            return HttpResponse('Китеп ийгилиетүү кошулду')
+            return render(request, 'succefuly.html')
         else:
             return HttpResponse('Форманы толтурууда ката кетти')
 

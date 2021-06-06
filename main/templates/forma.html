@@ -3,22 +3,21 @@
 {% block title %} Жаңы китеп кошуу {% endblock %}
 
 {% block content %}
-<main>
-    <div class="features">
-        
+<main>     
         <form  method="POST">
             <h1 class="form">Форма толтуруу барагы</h1>
-            {% csrf_token %}</p>
-            <p>Китептин аталышы: {{ form.title }}</p>
-            <p>Кыскача аныктама: {{ form.subtitle }}</p>
-            <p>Китепти сүрөттөө: {{ form.description }}</p>
-            <p>Китептин жанры:   {{ form.genre }}</p>
-            <p>Китептин баасы:   {{ form.price }}</p>
-            <p>Китептин автору:  {{ form.author }}</p>
-            <p>Чыккан жылы:      {{ form.year }}</p>
+            <div class="form">
+            {% csrf_token %}
+            <p>Китептин аталышы:</p> <b>{{ form.title }}</b>
+            <p>Кыскача аныктама:</p> <b>{{ form.subtitle }}</b>
+            <p>Китепти сүрөттөө:</p> {{ form.description }}
+            <p>Китептин жанры:  </p> <b>{{ form.genre }}</b>
+            <p>Китептин баасы:  </p> <b>{{ form.price }}</b>
+            <p>Китептин автору: </p> <b>{{ form.author }}</b>
+            <p>Чыккан жылы:    </p> <b>{{ form.year }}</b> <br><br>
      
             <button class="create_button" type="submit">Кошуу</button> 
+            </div>
         </form>
-    </div>
 </main>
 {% endblock %}
